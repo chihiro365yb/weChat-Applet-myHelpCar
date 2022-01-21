@@ -16,6 +16,7 @@
     "coverView": true,
     "es6": true,
     "postcss": true,
+    "checkSiteMap":false,
     "compileHotReLoad": false,
     "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
