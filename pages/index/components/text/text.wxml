@@ -1,0 +1,6 @@
+<template name="text">
+    <text selectable="{{true}}">
+        13454321232
+    </text>
+    <rich-text nodes="<h1 style='color:red;'>你好啊</h1>"></rich-text>
+</template>

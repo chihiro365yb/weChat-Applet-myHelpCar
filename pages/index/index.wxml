@@ -1,4 +1,8 @@
-<!--index.wxml-->
+<import src="./components/view/view.wxml" />
+<import src="./components/scroll-view/scroll-view.wxml" />
+<import src="./components/swiper/swiper.wxml" />
+<import src="./components/text/text.wxml" />
+<!-- index.wxml -->
 <view class="container">
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
@@ -8,9 +12,11 @@
       <open-data type="userNickName"></open-data>
     </block>
     <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">获取头像昵称</button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        获取头像昵称
+      </button>
+      <view wx:else>请使用1.4.4及以上版本基础库</view>
     </block>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -21,4 +27,13 @@
     <text class="user-motto">{{motto}}</text>
   </view>
   <button open-type="contact" bindcontact="handleContact">联系客服</button>
+  <!-- 富文本测试 -->
+  <text selectable="{{true}}">手机号:17376574141</text>
+
+  <!-- view组件 -->
+  <template is="viewCom"></template>
+  <template is="scrollView"></template>
+  <template is="swiper"></template>
+  <template is="text"></template>
+  <View/>
 </view>

@@ -1,4 +1,8 @@
 /**index.wxss**/
+@import './components/view/view.wxss';
+@import './components/scroll-view/scroll-view.wxss';
+@import './components/swiper/swiper.wxss';
+
 .userinfo {
   display: flex;
   flex-direction: column;
