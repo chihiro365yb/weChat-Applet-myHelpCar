@@ -35,5 +35,48 @@
   <template is="scrollView"></template>
   <template is="swiper"></template>
   <template is="text"></template>
+
+  <!-- 冒泡测试 -->
+  <view class="bubble" bindtap="handleBubble">
+    <button type="primary" class="bubble-btn" catchtap="handleBubbleBtn">{{ count }}</button>
+  </view>
   <View/>
+
+  <!-- 事件传参 -->
+  <view>
+    <button type="default" data-Num="{{ 2 }}" bindtap="handlePassNum">传参</button>
+  </view>
+
+  <!-- input事件 -->
+  <view>
+    请输入
+    <input class="ipt" value="{{ motto }}" bindinput="inputHandle"/>
+  </view>
+
+  <!-- if 条件 -->
+  <view wx:if="{{ type === 1 }}">那么</view>
+  <view wx:elif="{{ type === 2 }}">一定</view>
+  <view wx:else>祛湿</view>
+
+  <!-- block -->
+  <block wx:if="{{ visibile }}">
+    <view>view1</view>
+    <view>view2</view>
+    <view>view3</view>
+  </block>
+
+  <!-- for -->
+  <view wx:for="{{ arr }}" wx:key="ind" wx:for-index="ind" wx:for-item="ele">
+    索引是：{{ ind }} , 值为：{{ ele }}
+  </view>
+
+  <!-- hidden -->
+  <view hidden="{{ true }}">
+    <view>view4</view>
+    <view>view5</view>
+    <view>view6</view>
+  </view>
+
+  <!-- key -->
+  <view wx:for="{{ userItem }}" wx:key="id">{{ item.name }}</view>
 </view>

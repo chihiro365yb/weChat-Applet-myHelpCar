@@ -9,7 +9,16 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    count: 0,
+    type: 3,
+    visibile: true,
+    arr: [1,2,3,4],
+    userItem:[
+      {id:1,name:'詹三'},
+      {id:2,name:'李四'},
+      {id:3,name:'王五'},
+    ]
   },
   // 事件处理函数
   bindViewTap() {
@@ -43,6 +52,31 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  handleBubble(e){
+    console.log(e,'e');
+    const  { currentTarget, target } = e;
+    console.log(currentTarget,'currentTarget'); // 当前组件
+    console.log(target,'target'); // 内部Button组件
+  },
+  handleBubbleBtn(){
+    console.log('冒泡了');
+    this.setData({
+      count:this.data.count + 1
+    })
+  },
+  handlePassNum(e){
+    const { target } = e;
+    this.setData({
+      count:this.data.count + target.dataset.num
+    })
+  },
+  inputHandle(e){
+    const { detail } = e;
+    console.log(detail.value);
+    this.setData({
+      motto:detail.value
     })
   }
 })

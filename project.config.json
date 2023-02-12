@@ -16,7 +16,7 @@
     "coverView": true,
     "es6": true,
     "postcss": true,
-    "checkSiteMap":false,
+    "checkSiteMap": false,
     "compileHotReLoad": false,
     "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
@@ -40,7 +40,7 @@
     "minifyWXML": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
+  "libVersion": "2.30.0",
   "appid": "wxbd913fdb7cc18446",
   "projectname": "miniprogram-yuandaofu",
   "debugOptions": {
