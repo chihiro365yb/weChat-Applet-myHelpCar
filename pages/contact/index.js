@@ -1,4 +1,4 @@
-// pages/list/index.js
+// pages/contact/index.js
 Page({
 
   /**

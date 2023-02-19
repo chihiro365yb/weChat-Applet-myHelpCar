@@ -40,7 +40,7 @@
     "minifyWXML": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.30.0",
+  "libVersion": "2.25.4",
   "appid": "wxbd913fdb7cc18446",
   "projectname": "miniprogram-yuandaofu",
   "debugOptions": {

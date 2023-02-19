@@ -2,6 +2,7 @@
 @import './components/view/view.wxss';
 @import './components/scroll-view/scroll-view.wxss';
 @import './components/swiper/swiper.wxss';
+@import '/common/common.wxss';
 
 .userinfo {
   display: flex;
