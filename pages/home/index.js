@@ -18,7 +18,8 @@ Page({
       {id:1,name:'詹三'},
       {id:2,name:'李四'},
       {id:3,name:'王五'},
-    ]
+    ],
+    getInfo:[]
   },
   // 事件处理函数
   bindViewTap() {
@@ -77,6 +78,42 @@ Page({
     console.log(detail.value);
     this.setData({
       motto:detail.value
+    })
+  },
+  getInfo() {
+    wx.request({
+      url: 'https://www.escook.cn/api/get',
+      method:'GET',
+      data:{
+        name:'张启强',
+        age:90
+      },
+      success:(res)=>{
+        const { data } = res
+        if(data){
+          this.setData({
+            getInfo:data.data
+          })
+        }
+      }
+    })
+  },
+  postInfo(){
+    wx.request({
+      url: 'https://www.escook.cn/api/post',
+      method:'POST',
+      data:{
+        name:'安欣',
+        age:80,
+      },
+      success:(res)=>{
+        const { data } = res
+        if(data){
+          this.setData({
+            getInfo:data.data
+          })
+        }
+      }
     })
   }
 })

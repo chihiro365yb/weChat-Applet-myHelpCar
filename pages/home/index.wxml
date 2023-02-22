@@ -79,4 +79,14 @@
 
   <!-- key -->
   <view class="username" wx:for="{{ userItem }}" wx:key="id">{{ item.name }}</view>
+
+  <view>
+    <button bindtap="getInfo">get请求</button>
+    <text>{{ getInfo.name }}</text>
+    <text>{{ getInfo.age }}</text>
+  </view>
+
+  <view>
+    <button bindtap="postInfo">post请求</button>
+  </view>
 </view>

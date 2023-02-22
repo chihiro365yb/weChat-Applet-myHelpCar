@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/home/index",
+    "pages/myHome/index",
     "pages/message/index",
     "pages/contact/index"
   ],
@@ -17,6 +18,12 @@
     "list": [
       {
         "pagePath": "pages/home/index",
+        "text": "首页1",
+        "iconPath": "/images/tabs/home.png",
+        "selectedIconPath": "/images/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/myHome/index",
         "text": "首页",
         "iconPath": "/images/tabs/home.png",
         "selectedIconPath": "/images/tabs/home-active.png"
