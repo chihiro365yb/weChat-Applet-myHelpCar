@@ -1,2 +1,13 @@
-<!--pages/message/index.wxml-->
-<text>pages/message/index.wxml</text>
+<view>{{m1.toUpper(userName)}}</view>
+<view>{{m2.toLower(country)}}</view>
+
+
+<!-- wxs一般作为过滤器，不能作为事件回调 -->
+<wxs module="m1">
+  module.exports.toUpper=function(str){
+    return str.toUpperCase()
+  }
+</wxs>
+
+<!-- 外联wxs -->
+<wxs src="../../utils/tools.wxs" module="m2"></wxs>

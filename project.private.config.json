@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "联系我们",
+          "pathName": "pages/contact/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "message",
+          "pathName": "pages/message/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "Home",
+          "pathName": "pages/myHome/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "shopList",
+          "pathName": "pages/shopList/index",
+          "query": "title=美食&id=1",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

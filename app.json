@@ -3,7 +3,8 @@
     "pages/home/index",
     "pages/myHome/index",
     "pages/message/index",
-    "pages/contact/index"
+    "pages/contact/index",
+    "pages/shopList/index"
   ],
   "window":{
     "backgroundTextStyle":"dark",

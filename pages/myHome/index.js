@@ -6,7 +6,8 @@ Page({
    */
   data: {
     swiperList:[],
-    gridList:[]
+    gridList:[],
+    count:0
   },
 
   /**
@@ -15,6 +16,11 @@ Page({
   onLoad: function (options) {
     this.getSwipperList()
     this.getGridList()
+  },
+  addCount(){
+    this.setData({
+      count: this.data.count + 1
+    })
   },
   
   getSwipperList() {
@@ -95,5 +101,16 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+    /**
+   * 监听页面下拉刷新
+   */
+  onPullDownRefresh(){
+    this.setData({
+      count:0
+    })
+    wx.stopPullDownRefresh({
+      success: (res) => {},
+    })
+  },
 })

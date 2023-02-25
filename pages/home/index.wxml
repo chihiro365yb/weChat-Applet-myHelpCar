@@ -89,4 +89,18 @@
   <view>
     <button bindtap="postInfo">post请求</button>
   </view>
+
+  <view>
+  <!-- tabbar页面 switchTab -->
+   <navigator url="/pages/message/index" open-type="switchTab">导航到消息</navigator>
+  </view>
+
+  <view>
+  <!-- 普通页面 navigate -->
+   <navigator url="/pages/person/index" open-type="navigate">导航到个人</navigator>
+  </view>
+
+  <button bindtap="goToPerson">导航到个人</button>
+
+  <navigator url="/pages/person/index?name=zs&age=90">声明传参</navigator>
 </view>

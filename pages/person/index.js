@@ -10,9 +10,10 @@ Page({
 
   /**
    * 生命周期函数--监听页面加载
+   * @options 页面参数
    */
   onLoad: function (options) {
-
+    console.log(options,'options');
   },
 
   /**
@@ -62,5 +63,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goToMsg: function () {
+    wx.switchTab({
+      url: '/pages/message/index',
+    })
+  },
+  returnHome(){
+    wx.navigateBack({
+      delta: 1,
+    })
   }
 })

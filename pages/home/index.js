@@ -115,5 +115,16 @@ Page({
         }
       }
     })
+  },
+  goToPerson(){
+    wx.navigateTo({
+      url: '/pages/person/index?name=ls&age=99',
+    })
+  },
+    /**
+   * 监听上拉刷新
+   */
+  onReachBottom(){
+    console.log(123);
   }
 })
