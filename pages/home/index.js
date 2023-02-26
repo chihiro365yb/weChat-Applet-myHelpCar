@@ -126,5 +126,16 @@ Page({
    */
   onReachBottom(){
     console.log(123);
+  },
+  syncCount(e){
+    this.setData({
+      motto: e.detail.value
+    })
+  },
+  getTestCom(){
+    const child = this.selectComponent('#test4')
+    child.setData({
+      motto: child.properties.motto + 'cccc'
+    })
   }
 })

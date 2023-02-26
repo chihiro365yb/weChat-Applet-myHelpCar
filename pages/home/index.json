@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "my-test":"../../components/test/test"
+  },
   "onReachBottomDistance": 300
 }

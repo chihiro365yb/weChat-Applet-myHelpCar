@@ -43,6 +43,13 @@
       }
     ]
   },
+  "usingComponents": {
+    "my-test":"/components/test/test",
+    "my-test2":"/components/test2/index",
+    "my-test3":"/components/test3/index",
+    "my-test4":"/components/test4/index",
+    "my-test5":"/components/test5/index"
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

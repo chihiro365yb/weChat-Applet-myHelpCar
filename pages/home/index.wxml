@@ -103,4 +103,16 @@
   <button bindtap="goToPerson">导航到个人</button>
 
   <navigator url="/pages/person/index?name=zs&age=90">声明传参</navigator>
+
+  <my-test max="9"></my-test>
+  <my-test2></my-test2>
+  <my-test3>
+   <view slot="before">插槽填充的内容组件</view>
+   <view slot="after">插槽填充的内容组件</view>
+  </my-test3>
+  <my-test4 motto="{{motto}}" bind:sync="syncCount" id="test4"></my-test4>
+
+  <button bindtap="getTestCom">获取组件实例</button>
+
+  <my-test5></my-test5>
 </view>

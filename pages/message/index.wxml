@@ -1,6 +1,7 @@
 <view>{{m1.toUpper(userName)}}</view>
 <view>{{m2.toLower(country)}}</view>
 
+<my-test max="899"></my-test>
 
 <!-- wxs一般作为过滤器，不能作为事件回调 -->
 <wxs module="m1">

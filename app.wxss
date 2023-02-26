@@ -1,4 +1,5 @@
 /**app.wxss**/
+/* 对组件无用 */
 .container {
   height: 100%;
   display: flex;
