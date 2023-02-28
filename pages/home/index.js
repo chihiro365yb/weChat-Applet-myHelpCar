@@ -80,23 +80,21 @@ Page({
       motto:detail.value
     })
   },
-  getInfo() {
-    wx.request({
+  async getInfo() {
+   const { data } = await wx.p.request({
       url: 'https://www.escook.cn/api/get',
       method:'GET',
       data:{
         name:'张启强',
         age:90
-      },
-      success:(res)=>{
-        const { data } = res
-        if(data){
-          this.setData({
-            getInfo:data.data
-          })
-        }
       }
     })
+
+    if(data){
+      this.setData({
+        getInfo:data.data
+      })
+    }
   },
   postInfo(){
     wx.request({

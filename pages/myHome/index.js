@@ -1,3 +1,5 @@
+import { createStoreBindings } from 'mobx-miniprogram-bindings'
+import { store } from '../../store/index'
 // pages/myHome/index.js
 Page({
 
@@ -16,6 +18,13 @@ Page({
   onLoad: function (options) {
     this.getSwipperList()
     this.getGridList()
+
+    // 绑定store到页面
+    this.storeBindings = createStoreBindings(this,{
+      store,
+      fields: ['numA', 'numB', 'sum'],
+      actions: ['updateNumA']
+    })
   },
   addCount(){
     this.setData({
@@ -23,35 +32,30 @@ Page({
     })
   },
   
-  getSwipperList() {
-    wx.request({
+  async getSwipperList() {
+    const { data } = await wx.p.request({
       url: 'https://www.escook.cn/slides',
-      method:'GET',
-      success:(res)=>{
-        const { data } = res
-        console.log(data,'data');
-        if(data){
-          this.setData({
-            swiperList:data
-          })
-        }
-      }
+      method:'GET'
     })
+
+    if(data){
+      this.setData({
+        swiperList:data
+      })
+    }
   },
 
-  getGridList(){
-    wx.request({
+ async getGridList(){
+   const  { data } = await wx.p.request({
       url: 'https://www.escook.cn/categories',
-      method:'GET',
-      success:(res)=>{
-        const { data } = res
-        if(data){
-          this.setData({
-            gridList:data
-          })
-        }
-      }
+      method:'GET'
     })
+
+    if(data){
+      this.setData({
+        gridList:data
+      })
+    }
   },
 
   /**
@@ -79,7 +83,8 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+     // 销毁store
+     this.storeBindings.destoryStoreBindings()
   },
 
   /**
@@ -113,4 +118,10 @@ Page({
       success: (res) => {},
     })
   },
+  add(e){
+    this.updateNumA(e.target.dataset.step)
+  },
+  subtract(e){
+    this.updateNumA(e.target.dataset.step)
+  }
 })

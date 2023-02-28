@@ -6,6 +6,30 @@
     "pages/contact/index",
     "pages/shopList/index"
   ],
+  "subPackages": [
+    {
+      "root": "packA",
+      "name": "p1",
+      "pages": [
+        "packA/shopList/index"
+      ]
+    },
+    {
+      "root": "packB",
+      "name": "p2",
+      "independent": true,
+      "pages": [
+        "packB/person/index"
+      ]
+    }
+  ],
+  "preloadRule": { 
+    "pages/contact/index":{
+      "network": "all",
+      "packages": ["p1"]
+    }
+
+  },
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#f71515",
@@ -16,6 +40,7 @@
     "onReachBottomDistance": 50
   },
   "tabBar": {
+    "custom": true,
     "list": [
       {
         "pagePath": "pages/home/index",
@@ -48,8 +73,10 @@
     "my-test2":"/components/test2/index",
     "my-test3":"/components/test3/index",
     "my-test4":"/components/test4/index",
-    "my-test5":"/components/test5/index"
+    "my-test5":"/components/test5/index",
+    "van-button":"@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

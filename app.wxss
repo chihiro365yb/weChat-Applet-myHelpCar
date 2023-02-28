@@ -10,8 +10,12 @@
   box-sizing: border-box;
 } 
 
-view{
-  padding: 10rpx;
-  margin: 10rpx;
-  background-color: lightskyblue;
+page{
+  /* 自定制button */
+  --button-info-background-color:#C00000;
+  --button-info-border-color:#D60000;
+
+  --button-primary-background-color:#13A7A0;
+  --button-primary-border-color:#15B4AA;
+  margin-bottom: 200rpx;
 }

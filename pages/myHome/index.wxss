@@ -7,13 +7,6 @@ swiper image{
   width: 100%;
 }
 
-view{
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-
-}
-
 .grid-list{
   display: flex;
   flex-wrap: wrap;

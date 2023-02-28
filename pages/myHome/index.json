@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "numB-button":"../../components/test-store/index"
+  },
   "navigationBarBackgroundColor": "#2b4b6b",
   "navigationBarTitleText": "本地生活",
   "navigationBarTextStyle": "white",

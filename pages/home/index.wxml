@@ -115,4 +115,6 @@
   <button bindtap="getTestCom">获取组件实例</button>
 
   <my-test5></my-test5>
+  <van-button type="primary">按钮</van-button>
+  <van-button type="info">按钮</van-button>
 </view>
