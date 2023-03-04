@@ -1,5 +1,0 @@
-<view>
-  <slot name="before"></slot>
-  <view>组件内部</view>
-  <slot name="after"></slot>
-</view>

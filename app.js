@@ -1,8 +1,3 @@
-import { promisifyAll } from 'miniprogram-api-promise'
-
-const wxp = wx.p = {}
-promisifyAll(wx, wxp)
-
 // app.js
 App({
   /**
@@ -33,7 +28,4 @@ App({
   onHide: function () {
     
   },
-  globalData: {
-    userInfo: null
-  }
 })

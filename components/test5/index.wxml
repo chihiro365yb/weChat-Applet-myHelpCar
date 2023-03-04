@@ -1,1 +1,0 @@
-<view>我的名字叫：{{userName}}</view>

@@ -1,7 +1,0 @@
-.color-box{
-  line-height: 200rpx;
-  font-size: 24rpx;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0rpx 0rpx 2rpx black;
-}

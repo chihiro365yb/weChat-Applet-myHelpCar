@@ -1,7 +1,0 @@
-<template name="scrollView">
-  <scroll-view class="view" scroll-y="{{true}}">
-     <view class="view-A">A</view>
-     <view class="view-B">B</view>
-     <view class="view-C">C</view>
-  </scroll-view>
-</template>

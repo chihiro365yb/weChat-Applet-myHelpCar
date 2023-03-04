@@ -1,35 +1,7 @@
 {
   "pages":[
-    "pages/home/index",
-    "pages/myHome/index",
-    "pages/message/index",
-    "pages/contact/index",
-    "pages/shopList/index"
+    "pages/home/index"
   ],
-  "subPackages": [
-    {
-      "root": "packA",
-      "name": "p1",
-      "pages": [
-        "packA/shopList/index"
-      ]
-    },
-    {
-      "root": "packB",
-      "name": "p2",
-      "independent": true,
-      "pages": [
-        "packB/person/index"
-      ]
-    }
-  ],
-  "preloadRule": { 
-    "pages/contact/index":{
-      "network": "all",
-      "packages": ["p1"]
-    }
-
-  },
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#f71515",
@@ -38,45 +10,6 @@
     "enablePullDownRefresh":true,
     "backgroundColor": "#000",
     "onReachBottomDistance": 50
-  },
-  "tabBar": {
-    "custom": true,
-    "list": [
-      {
-        "pagePath": "pages/home/index",
-        "text": "首页1",
-        "iconPath": "/images/tabs/home.png",
-        "selectedIconPath": "/images/tabs/home-active.png"
-      },
-      {
-        "pagePath": "pages/myHome/index",
-        "text": "首页",
-        "iconPath": "/images/tabs/home.png",
-        "selectedIconPath": "/images/tabs/home-active.png"
-      },
-      {
-        "pagePath": "pages/message/index",
-        "text": "消息",
-        "iconPath": "/images/tabs/message.png",
-        "selectedIconPath": "/images/tabs/message-active.png"
-      },
-      {
-        "pagePath": "pages/contact/index",
-        "text": "联系我们",
-        "iconPath": "/images/tabs/contact.png",
-        "selectedIconPath": "/images/tabs/contact-active.png"
-      }
-    ]
-  },
-  "usingComponents": {
-    "my-test":"/components/test/test",
-    "my-test2":"/components/test2/index",
-    "my-test3":"/components/test3/index",
-    "my-test4":"/components/test4/index",
-    "my-test5":"/components/test5/index",
-    "van-button":"@vant/weapp/button/index",
-    "van-tabbar": "@vant/weapp/tabbar/index",
-    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   },
   "sitemapLocation": "sitemap.json"
 }

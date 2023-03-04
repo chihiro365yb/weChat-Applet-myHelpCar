@@ -1,2 +1,0 @@
-<van-button type="info" bindtap="addNumB" data-step="{{1}}">numB+1</van-button>
-<van-button type="warning" bindtap="subNumB" data-step="{{-1}}">numB-1</van-button>
